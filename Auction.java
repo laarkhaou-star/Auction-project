@@ -55,8 +55,8 @@ public class Auction
     {
         Lot selectedLot = getLot(lotNumber);
         if(selectedLot != null) {
-            Bid aBid = new Bid(bidder, value);
-            boolean successful = selectedLot.bidFor(aBid);
+            
+            boolean successful = selectedLot.bidFor(new Bid(bidder,value));//question2
             if(successful) {
                 System.out.println("The bid for lot number " +
                                    lotNumber + " was successful.");
