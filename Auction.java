@@ -126,7 +126,7 @@ public class Auction
     //q5 : the original lot number values dont change which causes their positions to not match their positios in the ArrayList
     //if the get method is called it would return a wrong lot or an error
 }
-public Lot removeLot(int number)
+public Lot removeLot(int number)//q7
     {
         Lot lot = getLot(number);
 
