@@ -133,6 +133,7 @@ public class Auction
 
         return unsoldLots;
     }
-    q5 : it would
+    //q5 : the original lot number values dont change which causes their positions to not match their positios in the ArrayList
+    //if the get method is called it would return a wrong lot or an error
 }
 
