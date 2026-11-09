@@ -77,28 +77,18 @@ public class Auction
      * @param lotNumber The number of the lot to return.
      * @return The lot with the given number, or null.
      */
-    public Lot getLot(int lotNumber)
+    public Lot getLot(int lotNumber)//q6
     {
-        if((lotNumber >= 1) && (lotNumber < nextLotNumber)) {
-            // The number seems to be reasonable.
-            Lot selectedLot = listOfLots.get(lotNumber - 1);
-            // Include a confidence check to be sure we have the
-            // right lot.
-            if(selectedLot.getNumber() != lotNumber) {
-                System.out.println("Internal error: Lot number " +
-                                   selectedLot.getNumber() +
-                                   " was returned instead of " +
-                                   lotNumber);
-                // Don't return an invalid lot.
-                selectedLot = null;
+        {
+            for (Lot lot : listOfLots) {
+                if (lot.getNumber() == lotNumber) {
+                    return lot;
+                }
             }
-            return selectedLot;
-        }
-        else {
-            System.out.println("Lot number: " + lotNumber +
-                               " does not exist.");
+
             return null;
         }
+       
     }
     public void close()//q3
     {
