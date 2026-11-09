@@ -100,5 +100,39 @@ public class Auction
             return null;
         }
     }
+    public void close()//q3
+    {
+        for (Lot lot : listOfLots) {
+            Bid highestBid = lot.getHighestBid();
+
+            if (highestBid != null) {
+                System.out.println(lot.toString());
+                System.out.println("Successful bidder: " +
+                    highestBid.getBidder().getName());
+                System.out.println("Winning bid: " +
+                    highestBid.getValue());
+            }
+            else {
+                System.out.println(lot.toString());
+                System.out.println("This lot has no bidder.");
+            }
+        }
+    }
+
+    public ArrayList<Lot> getUnsold()//q4
+    {
+        ArrayList<Lot> unsoldLots = new ArrayList<>();
+
+        for (Lot lot : listOfLots) {
+            Bid highestBid = lot.getHighestBid();
+
+            if (highestBid == null) {
+                unsoldLots.add(lot);
+            }
+        }
+
+        return unsoldLots;
+    }
+    q5 : it would
 }
 
