@@ -125,7 +125,7 @@ public class Auction
     }
     //q5 : the original lot number values dont change which causes their positions to not match their positios in the ArrayList
     //if the get method is called it would return a wrong lot or an error
-}
+
 public Lot removeLot(int number)//q7
     {
         Lot lot = getLot(number);
@@ -136,5 +136,9 @@ public Lot removeLot(int number)//q7
 
         return lot;
     }
+}
+//q8 : they both have the add method, clear method,the contains method,and other methods that are similar
+//methods that only linkedlist has are addfirst, addlast, getfirst, getlast, offer, poll, removefirst and removelast
+
 
 
